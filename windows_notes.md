@@ -13,13 +13,13 @@ Threads 3
 
 ## Virtio Disk
 Start with Sata
-Go to safeboot mode
+Go to safeboot mode `bcdedit /set {default} safeboot network`
 Shutdown
 Add a second disk
 (Add NIC virtio)
 Boot
 Install drivers
-Switch back to normal boot
+Switch back to normal boot `bcdedit /deletevalue {default} safeboot`
 Shutdown
 Remove 2nd driver
 Switch boot drive to Virtio
