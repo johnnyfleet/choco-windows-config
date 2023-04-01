@@ -3,7 +3,7 @@
 ## CPU Topologies
 Copy host configuration
 Topology
-Sockers 1
+Sockets 1
 Cores 4
 Threads 3
 
@@ -16,7 +16,7 @@ Start with Sata
 Go to safeboot mode `bcdedit /set {default} safeboot network`
 Shutdown
 Add a second disk
-(Add NIC virtio)
+Add a virtio network card too
 Boot
 Install drivers
 Switch back to normal boot `bcdedit /deletevalue {default} safeboot`
@@ -31,7 +31,7 @@ Virtio
 QXL
 Spize server
 
-Specific XML to sort scaling
+Specific XML to sort scaling. Add the following to the Video QXL xml tab (replacing what is there)
 ``` xml
 <video>
   <model type="qxl" ram="131072" vram="131072" vgamem="32768" heads="1" primary="yes"/>
